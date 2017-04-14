@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href = "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app = 'app'>
+<div class = "container" ng-controller = 'PostsCtrl'>
+    <h1>Recent Posts</h1>
+    <ul class = "list-group">
+        <li class = 'list-group-item' ng-repeat = "post in posts| orderBy:'-date'">
+            <strong>@{{ post.username }}</strong>
+            <span>{{ post.body }}</span>
+        </li>
+    </ul>
+    
+    <form role = 'form'>
+        <div class = 'form-group'>
+            <div class = 'input-group'>
+                <input ng-model = 'postBody' class = 'form-control'>
+                <span class = 'list-group-btn'>
+                    <button ng-click = 'addPost()' class = 'btn btn-default'>Add Post</button>
+                </span>
+            </div>
+        </div>
+    </form>
+
+
+
+</div>
+<!--<div ng-controller = 'PostsCtrl'>-->
+<!--{{posts}}-->
+<!--</div>-->
+<script src ='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js'></script>
+<script src = '/app.js'></script>
+</body>
+</html>
