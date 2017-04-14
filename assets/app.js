@@ -18,13 +18,9 @@ app.controller('PostsCtrl',function($scope, $http) {
         .success(function(posts){
             $scope.posts = posts;
          });
-//         “.error(function (err) {
+//       .error(function (err) {
 //   // handle the error case (if you care)
-// })”
-
-Excerpt From: Dickey, Jeff. “Write Modern Web Apps with the MEAN Stack: Mongo, Express, AngularJS, and Node.js.” iBooks.
-
-Excerpt From: Dickey, Jeff. “Write Modern Web Apps with the MEAN Stack: Mongo, Express, AngularJS, and Node.js.” iBooks. ;
+// })
 
 
     $scope.addPost = function(){

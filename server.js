@@ -14,4 +14,7 @@ app.use(require('./controllers/static'));
 app.listen(3000, function(){
     console.log('server is listening on', 3000);
 });
+// app.get('/', function (req, res) {
+//   res.sendfile('layouts/posts.html')
+// })
 module.exports = app;
